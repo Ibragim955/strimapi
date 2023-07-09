@@ -27,6 +27,7 @@ public class DepartmentController {
     public Optional<Employee> minSalary(@RequestParam ("departmentId") int departmentId) {
         return departmentService.findMaxSalary(departmentId);
     }
+
     @GetMapping("all")
     public List<Employee> findAll(@RequestParam ("departmentId") int departmentId) {
         return departmentService.findAll(departmentId);
