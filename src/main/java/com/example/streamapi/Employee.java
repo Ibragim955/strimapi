@@ -23,6 +23,7 @@ private int departmentId;
         return lastname;
     }
 
+
     public int getSalary() {
         return salary;
     }

@@ -13,7 +13,10 @@ import static java.util.stream.Collectors.groupingBy;
 public interface DepartmentService {
     Optional<Employee> findMaxSalary(Integer departmentId);
 
-    List<Employee> findAll(Integer departmentId);
+    default Map<Employee, Employee> findAll(Integer departmentId) {
+        return null;
+    }
+
 
     Optional<Employee> findMinSalary(Integer departmentId);
     public default Map<Integer, List<Employee>> find() {

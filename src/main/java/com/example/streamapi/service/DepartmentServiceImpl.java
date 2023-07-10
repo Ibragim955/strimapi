@@ -3,10 +3,7 @@ package com.example.streamapi.service;
 import com.example.streamapi.Employee;
 import org.springframework.stereotype.Service;
 
-import java.util.Comparator;
-import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
@@ -29,8 +26,8 @@ public class DepartmentServiceImpl implements DepartmentService{
     }
 
     @Override
-    public List<Employee> findAll(Integer departmentId) {
-        return   employeeService.getEmployees().stream()
+    public Map findAll(Integer departmentId) {
+        return (Map) employeeService.getEmployees().stream()
                 .filter(e -> Objects.equals(e.getDepartmentId(), departmentId ))
                 .collect(Collectors.toList());
     }
