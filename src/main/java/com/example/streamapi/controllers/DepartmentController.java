@@ -21,11 +21,11 @@ public class DepartmentController {
 
     @GetMapping("max-salary")
     public Optional<Employee> maxSalary(@RequestParam ("departmentId") int departmentId) {
-        return departmentService.findMaxSalary(departmentId);
+        return departmentService.findMinSalary(departmentId);
     }
     @GetMapping("min-salary")
     public Optional<Employee> minSalary(@RequestParam ("departmentId") int departmentId) {
-        return departmentService.findMinSalary(departmentId);
+        return departmentService.findMaxSalary(departmentId);
     }
     @GetMapping("all")
     public List<Employee> findAll(@RequestParam ("departmentId") int departmentId) {
