@@ -12,6 +12,7 @@ public interface EmployeeService {
 
     Employee add(Employee employee);
 
+
     Collection<Employee> getEmployees();
 
     Employee add(String fullname, String lastname);
